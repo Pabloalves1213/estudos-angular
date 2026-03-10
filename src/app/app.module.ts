@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ListaTarefasLocalComponent } from './lista-tarefas-local/lista-tarefas-local.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { ListaTarefaApiComponent } from './lista-tarefa-api/lista-tarefa-api.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaTarefasLocalComponent
+    ListaTarefasLocalComponent,
+    ListaTarefaApiComponent
   ],
   imports: [
     BrowserModule,

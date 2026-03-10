@@ -6,17 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-tarefas-local.component.scss']
 })
 export class ListaTarefasLocalComponent implements OnInit {
+  novaTarefa: string = '';
   tarefas = [
     {
       id: 1, descricao: 'Revisar conceitos de componentização',
       concluida: true
     },
     {
-      id: 2, descricao: 'Praticar a exibição de listas', concluida:
-        false
+      id: 2, descricao: 'Praticar a exibição de listas', concluida: false
     },
   ];
-  novaTarefa: string = '';
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
   adicionarTarefas() {
     const nova = {
       id: this.tarefas.length + 1,
@@ -24,11 +29,7 @@ export class ListaTarefasLocalComponent implements OnInit {
       concluida: false
     };
     this.tarefas.push(nova);
-    this.novaTarefa = '';
-  }
-  constructor() { }
-
-  ngOnInit(): void {
+    this.novaTarefa = ''; 
   }
 
 }
