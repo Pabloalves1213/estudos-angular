@@ -1,1 +1,23 @@
-<p>lista-tarefa-api works!</p>
+<div class="container">
+        <h2>Tarefas-api</h2>
+
+        <div class="lista-tarefas">
+                <!-- Percorre a lista de tarefas -->
+                <div *ngFor="let t of tarefas" class="tarefa-item">
+                        <div class="tarefa-header">
+                                <strong>{{ t.titulo }}</strong>
+                                <!-- Badge de status -->
+                                <span [class]="t.concluida ? 'status concluida' : 'status pendente'">
+                                        {{ t.concluida ? 'Concluída' : 'Pendente' }}
+                                </span>
+                        </div>
+
+                        <!-- EXIBINDO A DESCRIÇÃO AQUI -->
+                        <p class="tarefa-descricao">{{ t.descricao }}</p>
+
+                        <hr>
+                </div>
+        </div>
+
+        <button (click)="carregarTarefas()">Recarregar</button>
+</div>
