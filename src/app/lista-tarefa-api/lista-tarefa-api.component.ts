@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TarefasApiService } from '../services/tarefas-api.service';
 
 @Component({
   selector: 'app-lista-tarefa-api',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaTarefaApiComponent implements OnInit {
 
-  constructor() { }
+  tarefas: any[] = [];
+  erroMensagem: string = '';
+
+  constructor(private tarefasService: TarefasApiService) { }
 
   ngOnInit(): void {
+    this.carregarTarefas();
   }
 
+  carregarTarefas(): void {
+    this.tarefasService.getTarefas().subscribe({
+      next: (dados) => {
+        this.tarefas = dados;
+        console.log('Sucesso', dados);
+      },
+    });
+  }
 }

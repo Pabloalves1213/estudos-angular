@@ -1,0 +1,71 @@
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f4f6f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+}
+
+.lista-tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tarefa-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 6px solid #1976d2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.tarefa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tarefa-descricao {
+  margin-top: 10px;
+  color: #555;
+}
+
+.status-concluida {
+  background: #2e7d32;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.status-pendente {
+  background: #c62828;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background: #125ea8;
+  }
+}

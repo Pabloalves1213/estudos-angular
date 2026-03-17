@@ -17,6 +17,7 @@ export class ListaTarefasLocalComponent implements OnInit {
     },
   ];
 
+
   constructor() { }
 
   ngOnInit(): void {
@@ -29,7 +30,7 @@ export class ListaTarefasLocalComponent implements OnInit {
       concluida: false
     };
     this.tarefas.push(nova);
-    this.novaTarefa = ''; 
+    this.novaTarefa = '';
   }
 
 }
