@@ -14,4 +14,8 @@ export class TarefasApiService {
   getTarefas(): Observable<any[]> {
     return this.http.get<any[]>(this.urlApi);
   }
+
+   addtarefas(tarefa: string) {
+    return this.http.post(this.urlApi, tarefa);
+  }
 }
